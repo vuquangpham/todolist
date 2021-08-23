@@ -1,0 +1,169 @@
+.todolist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.create-todo {
+    width: 240px;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.createBtn {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: rgb(95, 95, 95);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.wrapBtn {
+    position: absolute;
+    width: 15px;
+    height: 70px;
+    background-color: #C4C4C4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.wrapBtn::before {
+    content: '';
+    position: absolute;
+    width: 70px;
+    height: 15px;
+    background-color: #C4C4C4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.create-todo:hover .createBtn {
+    transform: scale(1.2) rotate(180deg);
+    cursor: pointer;
+}
+
+.modal-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 7;
+    transform: translateY(-150%);
+    transition: all 0.3s;
+}
+
+.form-create {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.register {
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+    padding: 40px 20px;
+    transition: all 0.3s;
+    position: relative;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.active {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    outline: none;
+    background-color: #F3F5F7;
+    border: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    right: 20px;
+    top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 30px;
+    z-index: 2;
+}
+
+.register__title {
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    padding: 0 15px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(64, 110, 235);
+    padding: 10px 1px;
+    font-size: 19px;
+    outline: none;
+    width: 100%;
+    opacity: 0.8;
+
+}
+
+span {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease-in;
+    opacity: .5;
+    font-style: italic;
+}
+
+input:not(:placeholder-shown) + span,
+input:focus ~ span{
+    top: -10%;
+}
+
+.register__submit {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__submit button {
+    padding: 15px 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .4s;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+.register__submit button:hover {
+    opacity: 0.7;
+}
+
+.edit {
+    display: none;
+}

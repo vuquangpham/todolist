@@ -72,20 +72,18 @@ function Todolist({renderList, createTodo, removeTodo, editTodo}) {
     }
 
 
-    console.log(renderList);
-
     return (
         <div className="todolist">
             <ul className="wrapper">
                 {renderList.map((todo) => {
                     return <TodoItem todo = {todo} key={todo.id} removeTodo={removeTodo} editTodo={handleDataEditTodo}/>
                 })}
-            </ul>
             <div className="create-todo">
                 <div className="createBtn" onClick={openModal}>
                     <div className="wrapBtn"></div>
                 </div>
             </div>
+            </ul>
             <div className="modal-box" onMouseDown={handleCloseModal}>
                 <div className="form-create">
                     <div className="register">

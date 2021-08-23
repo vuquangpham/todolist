@@ -2,7 +2,7 @@
     /* Layout */
     width: 240px;
 
-    padding: 40px 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
     background-color: #91F2BE;
@@ -15,7 +15,11 @@
     position: relative;
     overflow: hidden;
 
-    margin: 0 20px;
+    margin: 0px 20px;
+}
+
+li {
+    /* margin: 10px 0; */
 }
 
 .card-top {
